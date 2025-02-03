@@ -27,3 +27,31 @@ jobs:
 
       - name: 🧪 Run tests
         run: flutter test
+
+
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.0' 
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests and generate report
+        run: flutter test --machine > test-report.json
+
+      - name: Upload Test Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: test-report.json
