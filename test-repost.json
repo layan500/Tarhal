@@ -1,0 +1,57 @@
+[
+  {
+    "event": "start",
+    "time": 0,
+    "protocolVersion": "0.1.1",
+    "runnerVersion": "1.21.0",
+    "pid": 12345
+  },
+  {
+    "event": "testStart",
+    "time": 5,
+    "test": {
+      "id": 1,
+      "name": "Unit Test - should return true when valid",
+      "groupIDs": [],
+      "metadata": {
+        "skip": false
+      },
+      "suiteID": 0
+    }
+  },
+  {
+    "event": "testDone",
+    "time": 50,
+    "testID": 1,
+    "result": "success",
+    "hidden": false,
+    "skipped": false
+  },
+  {
+    "event": "testStart",
+    "time": 55,
+    "test": {
+      "id": 2,
+      "name": "Widget Test - should render correctly",
+      "groupIDs": [],
+      "metadata": {
+        "skip": false
+      },
+      "suiteID": 0
+    }
+  },
+  {
+    "event": "testDone",
+    "time": 100,
+    "testID": 2,
+    "result": "failure",
+    "hidden": false,
+    "skipped": false,
+    "message": "Expected 'Button Found', but got 'null'."
+  },
+  {
+    "event": "done",
+    "time": 110,
+    "success": false
+  }
+] 
