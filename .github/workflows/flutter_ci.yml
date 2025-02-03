@@ -26,9 +26,9 @@ jobs:
       - name: 📦 Install dependencies
         run: flutter pub get
         
-      - name: Run tests and generate report
-        run: flutter test --machine > test-report.json
-
+      - name: 🧪 Run tests
+        run: flutter test
+        
       - name: Upload Test Report
         if: always()
         uses: actions/upload-artifact@v3
