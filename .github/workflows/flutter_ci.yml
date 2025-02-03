@@ -29,10 +29,5 @@ jobs:
       - name: 🧪 Run tests
         run: flutter test
         
-      - name: Upload Test Report
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-report
-          path: test-report.json
+    
 
